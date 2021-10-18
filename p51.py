@@ -29,7 +29,7 @@ def fitKDE(obs, bWidth=.25, kernel='gaussian', x=None):
     pdf = pd.Series(np.exp(logProb), index=x.flatten())
     return pdf
 
-x = np.random.normal(size=(100, 10))
-eVal0, eVec0 = getPCA(np.corrcoef(x, rowvar=0))
-pdf0 = mpPDF(1., q=x.shape[0]/float(x.shape[1]), pts=10)
-pdf1 = fitKDE(np.diag(eVal0), bWidth=.01)
+# x = np.random.normal(size=(100, 10))
+# eVal0, eVec0 = getPCA(np.corrcoef(x, rowvar=0))
+# pdf0 = mpPDF(1., q=x.shape[0]/float(x.shape[1]), pts=10)
+# pdf1 = fitKDE(np.diag(eVal0), bWidth=.01)

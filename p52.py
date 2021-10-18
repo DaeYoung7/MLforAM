@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 
 def getPCA(matrix):
     eVal, eVec = np.linalg.eigh(matrix)
@@ -15,9 +16,6 @@ def getRndCov(nCols, nFacts):
 
 def cov2corr(cov):
     std = np.sqrt(np.diag(cov))
-    print(cov.shape)
-    print(std.shape)
-    print(np.outer(std, std).shape)
     corr = cov / np.outer(std, std)
     corr[corr<-1], corr[corr>1] = -1, 1
     return corr
