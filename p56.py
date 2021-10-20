@@ -10,9 +10,6 @@ def denoisedCorr(eVal, eVec,nFacts):
 
 corr1 = denoisedCorr(eVal0, eVec0, nFacts0)
 eVal1, eVec1 = getPCA(corr1)
-plt.plot(np.diag(eVal0))
-plt.plot(np.diag(eVal1))
-plt.show()
 
 def denoisedCorr2(eVal, eVec, nFacts, alpha=0.):
     eValL, eVecL = eVal[:nFacts, :nFacts], eVec[:, :nFacts]
@@ -24,7 +21,3 @@ def denoisedCorr2(eVal, eVec, nFacts, alpha=0.):
 
 corr1 = denoisedCorr2(eVal0, eVec0, nFacts0, 0.5)
 eVal1, eVec1 = getPCA(corr1)
-
-plt.plot(np.diag(eVal0))
-plt.plot(np.diag(eVal1))
-plt.show()

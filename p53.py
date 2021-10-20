@@ -1,4 +1,3 @@
-from p51 import *
 from p52 import *
 from scipy.optimize import minimize
 

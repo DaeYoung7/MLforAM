@@ -1,5 +1,4 @@
-import numpy as np
-import matplotlib.pyplot as plt
+from p51 import *
 
 def getPCA(matrix):
     eVal, eVec = np.linalg.eigh(matrix)
