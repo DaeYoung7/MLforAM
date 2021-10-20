@@ -20,6 +20,4 @@ def findMaxEval(eVal, q, bWidth):
     return eMax, var
 
 eMax0, var0 = findMaxEval(np.diag(eVal0), q, bWidth=.01)
-print(np.diag(eVal0)[::-1].searchsorted(eMax0))
-print(eMax0)
 nFacts0 = eVal0.shape[0] - np.diag(eVal0)[::-1].searchsorted(eMax0)
