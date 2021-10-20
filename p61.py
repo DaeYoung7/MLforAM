@@ -32,7 +32,7 @@ nObs, nTrials, bWidth, shrink, minVarPortf = 1000, 1000, .01, False, True
 w1 = pd.DataFrame(columns=range(cov.shape[0]), index=range(nTrials), dtype=float)
 w1_d = w1.copy(deep=True)
 np.random.seed(0)
-for i in range(1):
+for i in range(nTrials):
     mu1, cov1 = simCovMu(mu0, cov0, nObs, shrink=shrink)
     if minVarPortf:
         mu1 = None
